@@ -117,11 +117,12 @@ unsigned char find_median(unsigned char* char_array, unsigned int size) {
   // else the median is the middle element 
   if (size%2 == 0) {
       int index1 = size/2;
-      int index2 = index1-1;
+      int index2 = index1+1;
       median = (temp_array[index1]+temp_array[index2])/2;  
   }else {
       median = temp_array[size/2];  
   }
+     median = (int)(median+0.5);
   free (temp_array);
   return median;
 
@@ -149,6 +150,7 @@ unsigned char find_mean(unsigned char* char_array, unsigned int size) {
   }
 
   mean = sum / size;
+  mean = (int)(mean+0.5);
   return mean;
 }
 
