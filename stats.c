@@ -40,7 +40,12 @@ int main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+  int size = sizeof(test)/sizeof(char);
   /* Statistics and Printing Functions Go Here */
+  print_statistics(test, size);
+  print_array(test, size);
+  sort_array(test, size);
+  print_array(test, size);
   return 0;
 
 }
@@ -88,9 +93,11 @@ void print_statistics(unsigned char* char_array, unsigned int size) {
 void print_array(unsigned char* char_array, unsigned int size) {
 
   int index;
+  printf("\n");
   for (index = 0; index < size; ++index) {
-    printf("%d", char_array[index]);
+    printf(" %d", char_array[index]);
   }
+  printf("\n");
 
 }
 
